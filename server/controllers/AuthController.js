@@ -21,8 +21,6 @@ export const signup = async(request, response, next) => {
         console.log(user);
         response.cookie("jwt", createToken(email, user.id),{
             maxAge,
-            secure: true,
-            SameSite: "None",
         });
         return response.status(201).json({
             user:{
@@ -57,8 +55,6 @@ export const login = async(request, response, next) => {
         }
         response.cookie("jwt", createToken(email, user.id),{
             maxAge,
-            secure: true,
-            SameSite: "None",
         });
         return response.status(200).json({
             user:{
@@ -180,7 +176,7 @@ export const removeProfileImage = async(request, response, next) => {
 
 export const logOut = async(request, response, next) => {
     try{
-        response.cookie("jwt","",{maxage:1, secure:true, SameSite:"None"});
+        response.cookie("jwt","",{maxage:1,});
         return response.status(200).send("Logout Successful.");
 
     }
