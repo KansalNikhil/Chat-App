@@ -1,5 +1,5 @@
 import Message from "../models/MessagesModel.js";
-import User from "../Models/UserModel.js";
+import User from "../models/UserModel.js";
 import mongoose from "mongoose";
 
 
