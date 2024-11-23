@@ -1,4 +1,3 @@
-import { Profiler } from "react";
 import User from "../Models/UserModel.js";
 import jwt from "jsonwebtoken";
 import { compare } from "bcrypt";
