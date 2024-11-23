@@ -34,7 +34,7 @@ export const signup = async(request, response, next) => {
     }
     catch(error){
         console.log({error});
-        return response.status(500).send("Internal server Error.");
+        return response.status(500).send(error.message);
     }
 }
 
@@ -74,7 +74,7 @@ export const login = async(request, response, next) => {
     }
     catch(error){
         console.log({error});
-        return response.status(500).send("Internal server Error.");
+        return response.status(500).send(error.Message);
     }
 }
 
