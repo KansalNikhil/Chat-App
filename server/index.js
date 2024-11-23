@@ -7,7 +7,7 @@ import authRoutes from "./routes/AuthRoutes.js";
 import contactsRoutes from "./routes/ContactRoutes.js";
 import messagesRoutes from "./routes/MessagesRoutes.js";
 import setupSocket from "./socket.js";
-import channelRoutes from "./routes/channelRoutes.js";
+import channelRoutes from "./routes/ChannelRoutes.js";
 
 dotenv.config();
 
