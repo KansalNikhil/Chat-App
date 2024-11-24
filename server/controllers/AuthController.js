@@ -24,7 +24,7 @@ export const signup = async(request, response, next) => {
             secure: true,
             httpOnly: true,
             sameSite: "None",
-            domain: "https://my-chat-app-client.onrender.com",
+            // domain: "https://my-chat-app-client.onrender.com",
         });
         return response.status(201).json({
             user:{
@@ -62,7 +62,7 @@ export const login = async(request, response, next) => {
             secure: true,
             httpOnly: true,
             sameSite: "None",
-            domain: "https://my-chat-app-client.onrender.com",
+            // domain: "https://my-chat-app-client.onrender.com",
         });
         return response.status(200).json({
             user:{
@@ -189,7 +189,7 @@ export const logOut = async(request, response, next) => {
             secure: true,
             httpOnly: true,
             sameSite: "None",
-            domain: "https://my-chat-app-client.onrender.com",
+            // domain: "https://my-chat-app-client.onrender.com",
             });
         return response.status(200).send("Logout Successful.");
 
