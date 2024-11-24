@@ -21,6 +21,10 @@ export const signup = async(request, response, next) => {
         console.log(user);
         response.cookie("jwt", createToken(email, user.id),{
             maxAge,
+            secure: true,
+            httpOnly: true,
+            sameSite: "None",
+            domain: "https://my-chat-app-server-lsdm.onrender.com",
         });
         return response.status(201).json({
             user:{
@@ -55,6 +59,10 @@ export const login = async(request, response, next) => {
         }
         response.cookie("jwt", createToken(email, user.id),{
             maxAge,
+            secure: true,
+            httpOnly: true,
+            sameSite: "None",
+            domain: "https://my-chat-app-server-lsdm.onrender.com",
         });
         return response.status(200).json({
             user:{
@@ -176,7 +184,13 @@ export const removeProfileImage = async(request, response, next) => {
 
 export const logOut = async(request, response, next) => {
     try{
-        response.cookie("jwt","",{maxage:1,});
+        response.cookie("jwt","",{
+            maxAge,
+            secure: true,
+            httpOnly: true,
+            sameSite: "None",
+            domain: "https://my-chat-app-server-lsdm.onrender.com",
+            });
         return response.status(200).send("Logout Successful.");
 
     }
