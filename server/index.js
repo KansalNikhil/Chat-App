@@ -15,6 +15,8 @@ const app = express();
 const port = process.env.PORT || 3001;
 const databaseUrl = process.env.DATABASE_URL;
 
+console.log(process.env.ORIGIN);
+
 app.use(cors({
     origin:[process.env.ORIGIN],
     credentials: true,
